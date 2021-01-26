@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.site-header__description {
+  margin: 1em;
+}
+
+.dogs-list {
+  list-style: none;
+  margin: 0.25em;
+  padding: 1.25em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25em;
+}
+
+.filter-container {
+  margin-bottom: 1em;
+}
+
+.filter input:focus {
+  outline: none;
+  border: 1px solid #2155ff;
+}
+
+.dog__container {
+  color: #333;
+  /* transition: 0.2s; */
+}
+
+.dog__container:hover {
+  background-color: #222;
+}
+
+.dog__container:focus {
+  outline: 0.25em solid #2155ff;
+}
+
+.dog__img {
+  border: 0.25em solid #222;
+  border-radius: 25%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+  height: 18vw;
+  object-fit: cover;
+  transition: 0.2s;
+  width: 18vw;
+}
+
+.dog__img:hover {
+  height: 25vw;
+  width: 25vw;
+}
+
+.dog__name {
+  color: #222;
+  font-size: 1.2em;
+  margin-top: 0.15em;
+}
+
+.dog-detail__wiki {
+  margin: 1em;
+}
+
+.dog-detail__wiki a {
+  color: #2155ff;
+}
+
+.dog-detail__wiki a:hover {
+  color: #333;
+}
+
+.dog-detail__wiki a:focus {
+  outline: 0.15em solid #2155ff;
+}
+
+.dog-detail__img-desc-container {
+  display: flex;
+  font-size: 1.5em;
+  gap: 2.5em;
+  margin: 1em;
+}
+
+@media only screen and (max-width: 950px) {
+  .dog-detail__img-desc-container {
+    display: block;
+  }
+}
+
+.dog-detail__img {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  height: auto;
+  width: 55vw;
+}
+
+.dog-detail__desc-container {
+  margin-top: 1.5em;
+}
+
+.dog-detail__desc-item p:nth-child(1) {
+  font-weight: bold;
+}
+
+.dog-detail__desc-item p:nth-child(2) {
+  margin-top: -1em;
+}
+
+.dog-detail__back-link-container {
+  margin: 2em;
+}
+
+.dog-detail__back-link {
+  color: #2155ff;
+}
+
+.dog-detail__back-link:hover {
+  color: #333;
+}
+.dog-detail__back-link:focus {
+  outline: 0.15em solid #2155ff;
+}
+
+.filter input {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .dogs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
