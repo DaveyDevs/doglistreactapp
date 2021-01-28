@@ -154,11 +154,12 @@ a:focus {
   border: 0.15em solid white;
   border-radius: 5%;
   color: white;
+  display: inline-block;
+  font-size: 1em;
   padding: 0.5em 1em;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
+  transition: 0.1s ease-in-out;
 }
 
 .scroll-to-top__button:hover,
@@ -168,4 +169,8 @@ a:focus {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
   color: #2155ff;
   cursor: pointer;
+}
+
+.scroll-to-top__button:active {
+  transform: scale(0.8);
 }
