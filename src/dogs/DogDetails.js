@@ -1,55 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 
-const API_URL = "https://api.thedogapi.com/v1/breeds";
+import AppContext from "../AppContext";
+
+// const API_URL = "https://api.thedogapi.com/v1/breeds";
 
 export function DogDetails() {
+  // Get the global variables & functions via context
+  const myContext = useContext(AppContext);
+
   const { id } = useParams();
 
-  const [loading, setLoading] = useState(true);
-  const [ourDog, setOurDog] = useState({});
-
-  // const foundDog = async () => {
-  //   try {
-  //     const theDog = await dogs.find(function (ourId) {
-  //       return ourId.id === Number(id);
-  //     });
-  //     console.log(theDog);
-  //     setOurDog(theDog);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
-
-  const getDog = async () => {
-    try {
-      const res = await fetch(API_URL);
-      const dogsResults = await res.json();
-      const theDog = dogsResults.find(function (ourId) {
-        return ourId.id === Number(id);
-      });
-
-      setOurDog(theDog);
-      setLoading(false);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  // const foundDog = () => {
-  //   try {
-  //     const theDog = dogs.find(function (ourId) {
-  //       return ourId.id === Number(id);
-  //     });
-  //     console.log(theDog);
-  //     setOurDog(theDog);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
-
   useEffect(() => {
-    getDog();
+    window.scrollTo(0, 0);
   }, []);
 
   // if (!loading) {
@@ -62,17 +25,24 @@ export function DogDetails() {
   //   setOurDog(theDog);
   // }
 
-  // if (loading) return null;
-
   return (
     <div className="dog-detail">
-      {!loading ? (
+      {!myContext.loading ? (
         <div>
-          <h1 className="dog-detail__name">{ourDog.name}</h1>
+          <h1 className="dog-detail__name">
+            {
+              myContext.dogs.find(function (ourId) {
+                return ourId.id === Number(id);
+              }).name
+            }
+          </h1>
           <div className="dog-detail__wiki">
             <a
-              href={`https://en.wikipedia.org/wiki/${ourDog.name
-                .split(" ")
+              href={`https://en.wikipedia.org/wiki/${myContext.dogs
+                .find(function (ourId) {
+                  return ourId.id === Number(id);
+                })
+                .name.split(" ")
                 .join("_")}`}
             >
               Wikipedia page
@@ -81,34 +51,76 @@ export function DogDetails() {
           <div className="dog-detail__img-desc-container">
             <img
               className="dog-detail__img"
-              src={ourDog.image.url}
-              alt={"Photo of " + ourDog.name}
+              src={
+                myContext.dogs.find(function (ourId) {
+                  return ourId.id === Number(id);
+                }).image.url
+              }
+              alt={
+                "Photo of " +
+                myContext.dogs.find(function (ourId) {
+                  return ourId.id === Number(id);
+                }).name
+              }
             />
 
             <div className="dog-detail__desc-container">
-              {ourDog.origin && (
+              {myContext.dogs.find(function (ourId) {
+                return ourId.id === Number(id);
+              }).origin && (
                 <div className="dog-detail__desc-item">
                   <p>Origin:</p>
-                  <p>{ourDog.origin}</p>
+                  <p>
+                    {
+                      myContext.dogs.find(function (ourId) {
+                        return ourId.id === Number(id);
+                      }).origin
+                    }
+                  </p>
                 </div>
               )}
 
-              {ourDog.temperament && (
+              {myContext.dogs.find(function (ourId) {
+                return ourId.id === Number(id);
+              }).temperament && (
                 <div className="dog-detail__desc-item">
                   <p>Temperament:</p>
-                  <p>{ourDog.temperament}</p>
+                  <p>
+                    {
+                      myContext.dogs.find(function (ourId) {
+                        return ourId.id === Number(id);
+                      }).temperament
+                    }
+                  </p>
                 </div>
               )}
-              {ourDog.bred_for && (
+              {myContext.dogs.find(function (ourId) {
+                return ourId.id === Number(id);
+              }).bred_for && (
                 <div className="dog-detail__desc-item">
                   <p>Bred for:</p>
-                  <p>{ourDog.bred_for}</p>
+                  <p>
+                    {
+                      myContext.dogs.find(function (ourId) {
+                        return ourId.id === Number(id);
+                      }).bred_for
+                    }
+                  </p>
                 </div>
               )}
-              {ourDog.weight.imperial && (
+              {myContext.dogs.find(function (ourId) {
+                return ourId.id === Number(id);
+              }).weight.imperial && (
                 <div className="dog-detail__desc-item">
                   <p>Size:</p>
-                  <p>{ourDog.weight.imperial} lbs</p>
+                  <p>
+                    {
+                      myContext.dogs.find(function (ourId) {
+                        return ourId.id === Number(id);
+                      }).weight.imperial
+                    }{" "}
+                    lbs
+                  </p>
                 </div>
               )}
             </div>
