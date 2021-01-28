@@ -6,7 +6,7 @@ export function Footer() {
       <a className="footer__link" href="https://opensource.org/licenses/MIT">
         MIT License
       </a>
-      <p className="footer__text">Copyright (c) 2021 Davey Devs</p>
+      <p className="footer__text">Copyright (c) 2021 DaveyDevs</p>
     </footer>
   );
 }

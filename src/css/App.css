@@ -43,7 +43,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
   height: 18vw;
   object-fit: cover;
-  transition: 0.2s;
+  transition: 0.5s ease-in;
   width: 18vw;
 }
 
@@ -76,15 +76,9 @@
 
 .dog-detail__img-desc-container {
   display: flex;
-  font-size: 1.5em;
+  font-size: 1.25em;
   gap: 2.5em;
   margin: 1em;
-}
-
-@media only screen and (max-width: 950px) {
-  .dog-detail__img-desc-container {
-    display: block;
-  }
 }
 
 .dog-detail__img {
@@ -130,8 +124,48 @@ a:focus {
   margin-left: 1rem;
 }
 
+@media only screen and (max-width: 425px) {
+  .dog-detail__img {
+    width: 85vw;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .dogs-list {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media only screen and (max-width: 950px) {
+  .dog-detail__img-desc-container {
+    display: block;
+  }
+}
+
+.scroll-to-top {
+  bottom: 2em;
+  margin-left: 60%;
+  position: sticky;
+  z-index: 99999;
+}
+
+.scroll-to-top__button {
+  background-color: #2155ff;
+  border: 0.15em solid white;
+  border-radius: 5%;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.scroll-to-top__button:hover,
+.scroll-to-top__button:focus {
+  background-color: white;
+  border: 0.15em solid #2155ff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+  color: #2155ff;
+  cursor: pointer;
 }
