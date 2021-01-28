@@ -109,15 +109,21 @@
   margin: 2em;
 }
 
-.dog-detail__back-link {
+a {
   color: #2155ff;
 }
 
-.dog-detail__back-link:hover {
+a:hover {
   color: #333;
 }
-.dog-detail__back-link:focus {
+
+a:focus {
   outline: 0.15em solid #2155ff;
+}
+
+.footer__text {
+  margin-top: 0.25em;
+  margin-bottom: 1em;
 }
 
 .filter input {
