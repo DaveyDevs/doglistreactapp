@@ -58,6 +58,10 @@
   margin-top: 0.15em;
 }
 
+.dog__name:hover {
+  color: #2155ff;
+}
+
 .dog-detail__wiki {
   margin: 1em;
 }
@@ -113,6 +117,30 @@ a:hover {
 
 a:focus {
   outline: 0.15em solid #2155ff;
+}
+
+.header {
+  /* border: 2px solid black; */
+  color: blue;
+  display: flex;
+  /* height: 1.5em; */
+  /* gap: 1em; */
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+
+.header__link {
+  height: 1.5em;
+  font-size: 1.5em;
+  margin-right: 5vw;
+  overflow: hidden;
+  position: relative;
+  color: #222;
+  margin-top: 0.15em;
+}
+
+.header__link:hover {
+  color: #2155ff;
 }
 
 .footer__text {

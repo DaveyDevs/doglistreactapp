@@ -6,6 +6,8 @@ import "./css/App.css";
 import AppContext from "./AppContext";
 import { DogsList } from "./dogs/DogsList";
 import { DogDetails } from "./dogs/DogDetails";
+import { About } from "./About";
+import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 const API_URL = "https://api.thedogapi.com/v1/breeds";
@@ -43,7 +45,11 @@ function App() {
       <div className="App">
         <main>
           <Router>
+            <Header />
             <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
               <Route path="/dog/:id">
                 <DogDetails />
               </Route>
@@ -51,8 +57,8 @@ function App() {
                 <DogsList />
               </Route>
             </Switch>
+            <Footer />
           </Router>
-          <Footer />
         </main>
       </div>
     </AppContext.Provider>
