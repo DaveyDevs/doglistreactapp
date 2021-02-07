@@ -91,12 +91,12 @@ export function DogsList() {
 
   return (
     <div className="site-header">
-      <h1 className="site-header__title">Dogs List!</h1>
+      <h1 className="site-header__title">Dogs List! 🐾</h1>
       <h2 className="site-header__description">
         Scroll through a list of breeds or search by name.
       </h2>
       <Filter filter={filter} setFilter={setFilter} />
-
+      <ScrollToTop />
       <ul className="dogs-list">
         {!myContext.loading ? (
           myContext.dogs
@@ -106,7 +106,6 @@ export function DogsList() {
           <p>Loading...</p>
         )}
       </ul>
-      <ScrollToTop />
     </div>
   );
 }

@@ -131,7 +131,8 @@ a:focus {
 
 .header__link {
   height: 1.5em;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  font-weight: bold;
   margin-right: 5vw;
   overflow: hidden;
   position: relative;
@@ -172,8 +173,8 @@ a:focus {
 
 .scroll-to-top {
   bottom: 2em;
-  margin-left: 60%;
-  position: sticky;
+  margin-left: 70%;
+  position: fixed;
   z-index: 99999;
 }
 
@@ -201,4 +202,35 @@ a:focus {
 
 .scroll-to-top__button:active {
   transform: scale(0.8);
+}
+
+/* About page */
+
+.about {
+  margin: 1.75em;
+}
+
+/* .about__list-container {
+
+} */
+
+.about li {
+  text-align: left;
+  /* list-style-type: "🐾";
+  padding-inline-start: 1ch; */
+}
+
+.about__tools ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about__tools li {
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .about__tools ul {
+    grid-template-columns: 1fr 1fr;
+  }
 }
