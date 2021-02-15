@@ -1,4 +1,5 @@
 import React from "react";
+import { FaReact, FaJsSquare, FaHtml5, FaCss3 } from 'react-icons/fa'
 
 export function About() {
   return (
@@ -11,24 +12,40 @@ export function About() {
       <div className="about__tools">
         <h2>What else was used to make this site?</h2>
         <div className="about__list-container">
-          <ul>
+          <ul className="about__tools-ul">
             <li>
-              I think I should make this icons instead with React as the biggest
-              up top and then JS, HTML, and CSS below
+              <div>
+                <FaReact className="about__logo react" />
+                <p>ReactJS</p>
+              </div>            
             </li>
-
-            <li>ReactJS</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li className="tech">
+              <div>
+                <FaJsSquare className="about__logo" />
+                <p>JavaScript</p>
+              </div>
+            </li>
+            
+            <li className="tech">
+              <div>
+                <FaHtml5 className="about__logo" />
+                <p>HTML</p>
+              </div>
+            </li>
+            <li className="tech">
+              <div>
+                <FaCss3 className="about__logo" />
+                <p>CSS</p>
+              </div>
+            </li>
           </ul>
         </div>
         <div className="test-svg"></div>
       </div>
-      <div className="about__techniques">
-        <h2>Techniques used and learned</h2>
-        <div className="about__list-container">
-          <ul>
+      <div className="about__techniques about__list-container">
+        <h2>A few programming techniques used and learned:</h2>
+        <div>
+          <ul className="about__list-main-ul">
             <li>React</li>
             <ul>
               <li>React Router</li>
@@ -47,22 +64,30 @@ export function About() {
             <li>JavaScript</li>
             <ul>
               <li>Connecting to an API</li>
-              <li>Something about async?</li>
+              <li>Asynchronous data fetching</li>
+              <li>Working with a component structure</li>
             </ul>
             <li>Accessibility</li>
+            <ul>
+              <li>Using semantic HTML</li>
+              <li>Tab order</li>
+              <li>Testing with a screen reader</li>
+            </ul>
           </ul>
         </div>
       </div>
-      <div className="about__future">
-        <h2>Future enhancements and/or lessons learned?:</h2>
-        <ul>
+      <div className="about__future about__list-container">
+        <h2>Future enhancements:</h2>
+        <ul className="about__list-main-ul">
           <li>
             Make list searchable by characteristics (temperament, color, size,
             etc.)
           </li>
-          <li>Performance?</li>
+          <li>Update performance: Ensure that users with various network speeds can have a decent experience.</li>
+          <li>Continue to research and develop further accessibility functionality.</li>
         </ul>
       </div>
+      <h2 className="about__contact">Feel free to <a href="mailto:daveydevs@gmail.com"> ask me more</a> about this project!</h2>
     </div>
   );
 }

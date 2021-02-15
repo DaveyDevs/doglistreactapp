@@ -210,9 +210,46 @@ a:focus {
   margin: 1.75em;
 }
 
-/* .about__list-container {
+.about__subtitle {
+  margin-bottom: 2em;
+}
 
-} */
+.about__tools-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "react react react" 
+  "tech tech tech";
+  list-style: none;
+  justify-content: center;
+  
+  padding: 0;
+}
+
+.about__tools-ul li:first-child{
+  grid-area: react;
+}
+
+.about__tools-ul div {
+  align-items: center;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.about__logo {
+  height: 5em;
+  margin: auto -3em -.5em -3em;
+  padding: 0;
+  width: 40vmin;
+}
+
+.react {
+  height: auto;
+  width: 25vh;
+}
 
 .about li {
   text-align: left;
@@ -220,17 +257,39 @@ a:focus {
   padding-inline-start: 1ch; */
 }
 
-.about__tools ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .about__tools li {
   font-size: 1.5em;
 }
 
+.about__list-container {
+  display: block;
+  margin: auto auto 5em auto;
+  width: 50vmax;
+}
+
+.about__list-container:first-of-type {
+  margin: auto auto auto auto;
+}
+
+.about__list-main-ul {
+  font-size: 1.25em;
+}
+
+.about__list-main-ul li {
+  margin: .25em;
+}
+
+.about__contact {
+  margin-bottom: 2.5em;
+}
+
 @media only screen and (max-width: 600px) {
-  .about__tools ul {
-    grid-template-columns: 1fr 1fr;
+  .about__tools-ul {
+    grid-template-areas: 
+    "react" 
+    "tech";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
+
