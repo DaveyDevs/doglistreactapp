@@ -301,5 +301,10 @@ a:focus {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+
+  .react {
+    height: 5em;
+    width: auto;
+  }
 }
 
