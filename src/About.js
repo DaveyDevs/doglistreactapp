@@ -6,7 +6,7 @@ export function About() {
     <div className="about">
       <h1 className="about__title">About Dogs List! 🐾</h1>
       <h2 className="about__subtitle">
-        A portfolio project by <a href="daveydevs.com">DaveyDevs</a>, using data
+        A portfolio project by <a href="https://daveydevs.netlify.app/">DaveyDevs</a>, using data
         from <a href="https://thedogapi.com/">TheDogAPI</a>
       </h2>
       <div className="about__tools">
