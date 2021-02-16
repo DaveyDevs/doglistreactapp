@@ -87,7 +87,7 @@ export function About() {
           <li>Continue to research and develop further accessibility functionality.</li>
         </ul>
       </div>
-      <h2 className="about__contact">Feel free to <a href="mailto:daveydevs@gmail.com"> ask me more</a> about this project!</h2>
+      <h2 className="about__contact">Feel free to <a href="mailto:daveydevs@gmail.com"> ask me more</a> about this project <a href="https://github.com/DaveyDevs/doglistreactapp">or check it out on GitHub</a>!</h2>
     </div>
   );
 }
