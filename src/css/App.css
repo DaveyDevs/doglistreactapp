@@ -257,8 +257,8 @@ a:focus {
 }
 
 .react {
-  height: 25vh;
-  width: auto;
+  height: auto;
+  width: 25vw;
 }
 
 .about li {
